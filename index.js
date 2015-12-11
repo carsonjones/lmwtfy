@@ -7,5 +7,7 @@ app.get('/', function(req, res){
 });
 
 var server = app.listen(8888, function() {
-  console.log('App running.');
+  var host = server.address().address;
+  var port = server.address().port;
+  console.log('App running on %s%2.', host, port);
 });
